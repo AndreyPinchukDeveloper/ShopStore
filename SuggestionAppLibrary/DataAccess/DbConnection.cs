@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace SuggestionAppLibrary.DataAccess;
 
-public class DbConnect ion : IDbConnection
+public class DbConnection : IDbConnection
 {
 	private readonly IConfiguration _config;
 	private readonly IMongoDatabase _db;
