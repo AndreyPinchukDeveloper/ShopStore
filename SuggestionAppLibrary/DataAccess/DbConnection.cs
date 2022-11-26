@@ -26,7 +26,7 @@ public class DbConnection : IDbConnection
 	{
 		_config = config;
 		Client = new MongoClient(_config.GetConnectionString(_connectionId));
-		DbName = _config[key: "DatabaseName"];//check it
+		DbName = _config[key:"DatabaseName"];//check it
 		_db = Client.GetDatabase(DbName);
 
 		CategoryCollection = _db.GetCollection<CategoryModel>(CategoryCollectionName);
