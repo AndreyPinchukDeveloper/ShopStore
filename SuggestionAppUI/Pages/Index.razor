@@ -29,7 +29,12 @@
     <div>
         @if(suggestions is not null)
         {
-            
+            <Virtualize Items="@suggestions" Context="s" OverscanCount="10">
+                <div>
+                    <div @GetUpvoteTopText(s)></div>
+                    <span class="oi oi-caret-top"></span>
+                </div>
+            </Virtualize>
         }
     </div>
 </div>
